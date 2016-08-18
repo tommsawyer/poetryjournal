@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block intro
+    .container
+        .row
+            .col-md-12
+                h3 Рифмы к слову #{rhyme.baseWord}:
+
+block content
+    .container
+        .row
+            .col-md-12
+                ul
+                    each rhymeWord in rhyme.rhymes
+                        li= rhymeWord

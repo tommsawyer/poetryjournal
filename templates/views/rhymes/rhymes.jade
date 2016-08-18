@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block intro
+    .container
+        .row
+            .col-md-12
+                a(href='/add_rhyme') Добавить новую рифму
+        .row
+            .col-md-12
+                h3 Рифмы к словам:
+
+block content
+    .container
+        .row
+            .col-md-12
+                ul
+                    each rhyme in rhymes
+                        a(href='/rhyme/#{rhyme.baseWord}')
+                            li= rhyme.baseWord

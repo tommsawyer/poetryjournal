@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block intro
+    .container
+        .row
+            .col-md-12
+                h3 Метафоры
+
+block content
+    .container
+        .row
+            .col-md-12
+                ul
+                    each metaphor in metaphors
+                        a(href='/metaphor/#{metaphor._id}')
+                            li= metaphor.text

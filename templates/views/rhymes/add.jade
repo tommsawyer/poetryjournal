@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block content
+    .container
+        .row
+            .col-md-5
+                form(method="POST" name="addrhyme" id="addrhyme" action="/add_rhyme")
+                    .form-group
+                        label(for='baseWord') Ключевое слово
+                        input(class='form-control' id='baseWord' name='baseWord') 
+                        label(for='rhymeWord') Рифма к нему
+                        input(class='form-control' id='rhymeWord' name='rhymeWord')
+                        button(type="submit" form="addrhyme" class="btn btn-primary") Отправить
